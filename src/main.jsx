@@ -13,7 +13,8 @@ const stories = [
     title: 'A laptop that opened a door to engineering education',
     stat: '₹39,000',
     statLabel: 'laptop support',
-    text: 'Gift provided a Dell laptop valued at ₹39,000 to a girl from a financially disadvantaged background who was pursuing a B.E. degree at an engineering college.'
+    text: 'Gift provided a Dell laptop valued at ₹39,000 to a girl from a financially disadvantaged background who was pursuing a B.E. degree at an engineering college.',
+    image: '/images/education-laptop.svg'
   },
   {
     tag: 'Women & Livelihood',
@@ -21,7 +22,8 @@ const stories = [
     title: 'Practical support for 100 women',
     stat: '100',
     statLabel: 'women supported',
-    text: 'In a documented 2020 initiative, 100 unmarried and widowed women around age 30 received advanced sewing machines and electric irons, with additional household and food support for participating families and children.'
+    text: 'In a documented 2020 initiative, 100 unmarried and widowed women around age 30 received advanced sewing machines and electric irons, with additional household and food support for participating families and children.',
+    image: '/images/women-sewing.svg'
   },
   {
     tag: 'Education',
@@ -29,7 +31,8 @@ const stories = [
     title: 'Keeping children connected to school',
     stat: '100',
     statLabel: 'students',
-    text: 'Educational stationery and provisions, including notebooks and pencil boxes, were provided to 100 students from Grade 1 through Grade 12.'
+    text: 'Educational stationery and provisions, including notebooks and pencil boxes, were provided to 100 students from Grade 1 through Grade 12.',
+    image: '/images/education-supplies.svg'
   },
   {
     tag: 'Education',
@@ -37,7 +40,8 @@ const stories = [
     title: 'Helping three Bangalore families continue school',
     stat: '₹1,09,500',
     statLabel: 'education fees',
-    text: 'Gift supported school fees for seven children across three families in Bangalore, covering students from Grade 3 through Grade 7.'
+    text: 'Gift supported school fees for seven children across three families in Bangalore, covering students from Grade 3 through Grade 7.',
+    image: '/images/family-education.svg'
   },
   {
     tag: 'Healthcare',
@@ -45,7 +49,8 @@ const stories = [
     title: 'Standing with a family through medical hardship',
     stat: 'Ongoing',
     statLabel: 'family support',
-    text: 'A family in Tirunelveli received medical provisions and treatment-related support, including transportation and facilities for care in Chennai, alongside long-term educational support for their daughter.'
+    text: 'A family in Tirunelveli received medical provisions and treatment-related support, including transportation and facilities for care in Chennai, alongside long-term educational support for their daughter.',
+    image: '/images/medical-family.svg'
   },
   {
     tag: 'Healthcare',
@@ -53,7 +58,8 @@ const stories = [
     title: 'Help when treatment could not wait',
     stat: '₹1 lakh',
     statLabel: 'documented support',
-    text: 'Gift documented support of ₹1,500 per month toward one family’s medical treatment and ₹1 lakh toward delivery and related expenses for a pregnant woman.'
+    text: 'Gift documented support of ₹1,500 per month toward one family’s medical treatment and ₹1 lakh toward delivery and related expenses for a pregnant woman.',
+    image: '/images/medical-family.svg'
   },
   {
     tag: 'Community Care',
@@ -61,7 +67,8 @@ const stories = [
     title: 'Food support for a school community',
     stat: '300+',
     statLabel: 'students & parents',
-    text: 'Gift provided food for 300 students and their parents at a blind school in Tirunelveli and also visited a school serving children with hearing and speech disabilities.'
+    text: 'Gift provided food for 300 students and their parents at a blind school in Tirunelveli and also visited a school serving children with hearing and speech disabilities.',
+    image: '/images/education-supplies.svg'
   },
   {
     tag: 'COVID-19 Response',
@@ -69,25 +76,29 @@ const stories = [
     title: 'Supporting frontline workers',
     stat: '50',
     statLabel: 'helpers supported',
-    text: 'During the COVID-19 period, Gift provided sanitizer, masks and herbal drinks to 50 helpers associated with an electricity board.'
+    text: 'During the COVID-19 period, Gift provided sanitizer, masks and herbal drinks to 50 helpers associated with an electricity board.',
+    image: '/images/frontline-support.svg'
   }
 ];
 
 const futureVision = [
   {
     icon: HandHeart,
+    image: '/images/women-center.svg',
     label: 'WOMEN',
     title: 'A Safe Place for Every Woman',
     text: 'A future network of women-centered rural care spaces where women can seek help privately and without shame — with menstrual care, breastfeeding space, counseling, basic diagnosis, maternity support and a secure environment.'
   },
   {
     icon: Stethoscope,
+    image: '/images/mission-hospital.svg',
     label: 'HEALTHCARE',
     title: 'Gift Mission Hospital',
     text: 'A long-term vision for a high-tech multispecialty mission hospital where care is free for all, supported by advanced diagnostics, critical care, digital systems, telemedicine and compassionate clinical services.'
   },
   {
     icon: GraduationCap,
+    image: '/images/child-pathway.svg',
     label: 'EDUCATION',
     title: 'Every Child Deserves a Chance',
     text: 'A long-term education pathway for children from economically disadvantaged and rural communities — supporting not only immediate needs, but the journey toward higher education, independence and the ability to give back.'
@@ -145,6 +156,7 @@ function App() {
               </div>
             </div>
             <aside className="hero-panel">
+              <div className="hero-image"><img src="/images/education-laptop.svg" alt="Student studying with a laptop" /></div>
               <div className="panel-icon"><Heart fill="currentColor" size={24}/></div>
               <div className="panel-label">OUR BELIEF</div>
               <h2>Good work deserves good support.</h2>
@@ -186,17 +198,16 @@ function App() {
           </div>
           <div className="work-grid">
             {[
-              [HandHeart, 'Community Support', 'Food, clothing, essential provisions and practical help for people and families facing difficult circumstances.'],
-              [GraduationCap, 'Education', 'School materials, fees and longer-term educational support for children who may otherwise struggle to continue.'],
-              [Stethoscope, 'Medical Support', 'Financial and practical assistance for treatment, transportation, medical provisions and urgent family needs.'],
-              [Users, 'Women & Families', 'Support for women, widows, children who have lost parents and families navigating financial hardship.'],
-              [ShieldCheck, 'Support to Organizations', 'Contributions to charitable trusts, care centers and community initiatives whose work aligns with genuine need.'],
-              [Heart, 'Dignity First', 'A simple principle behind every effort: people should be able to receive help without losing their dignity.']
-            ].map(([Icon,title,text]) => (
+              [HandHeart, 'Community Support', 'Food, clothing, essential provisions and practical help for people and families facing difficult circumstances.', '/images/food-community.svg'],
+              [GraduationCap, 'Education', 'School materials, fees and longer-term educational support for children who may otherwise struggle to continue.', '/images/education-supplies.svg'],
+              [Stethoscope, 'Medical Support', 'Financial and practical assistance for treatment, transportation, medical provisions and urgent family needs.', '/images/medical-family.svg'],
+              [Users, 'Women & Families', 'Support for women, widows, children who have lost parents and families navigating financial hardship.', '/images/women-sewing.svg'],
+              [ShieldCheck, 'Support to Organizations', 'Contributions to charitable trusts, care centers and community initiatives whose work aligns with genuine need.', '/images/community-2.svg'],
+              [Heart, 'Dignity First', 'A simple principle behind every effort: people should be able to receive help without losing their dignity.', '/images/family-education.svg']
+            ].map(([Icon,title,text,image]) => (
               <article className="work-card" key={title}>
-                <Icon size={24}/>
-                <h3>{title}</h3>
-                <p>{text}</p>
+                <img className="work-image" src={image} alt={title} />
+                <div className="work-card-body"><Icon size={22}/><h3>{title}</h3><p>{text}</p></div>
               </article>
             ))}
           </div>
@@ -227,6 +238,7 @@ function App() {
           <div className="story-grid">
             {stories.map((s) => (
               <article className="story-card" key={s.number}>
+                <img className="story-image" src={s.image || '/images/story-3.svg'} alt="" />
                 <div className="story-top">
                   <span className="story-number">{s.number}</span>
                   <span className="tag">{s.tag}</span>
@@ -248,6 +260,7 @@ function App() {
           <div className="dream-grid">
             {futureVision.map(({icon: Icon, label, title, text}, i) => (
               <article className="dream-card" key={title}>
+                <img className="dream-image" src={image} alt={title} />
                 <div className="dream-meta"><span>0{i+1}</span><b>{label}</b></div>
                 <Icon size={28}/>
                 <h3>{title}</h3>

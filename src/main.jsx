@@ -258,7 +258,7 @@ function App() {
             <p>Not everything we dream about exists today. We want to be transparent about that. These are long-term aspirations — a roadmap for what Gift hopes to make possible as the Trust grows.</p>
           </div>
           <div className="dream-grid">
-            {futureVision.map(({icon: Icon, label, title, text}, i) => (
+            {futureVision.map(({icon: Icon, image, label, title, text}, i) => (
               <article className="dream-card" key={title}>
                 <img className="dream-image" src={image} alt={title} />
                 <div className="dream-meta"><span>0{i+1}</span><b>{label}</b></div>

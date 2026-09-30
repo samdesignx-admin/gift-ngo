@@ -107,13 +107,60 @@ const futureVision = [
 
 function Logo() {
   return (
-    <a className="brand" href="#top" aria-label="Gift Charitable Trust home">
-      <div className="brand-symbol"><span>G</span><Heart size={15} fill="currentColor" /></div>
-      <div className="brand-wordmark">
-        <strong>Gift</strong>
-        <small>CHARITABLE TRUST</small>
-      </div>
+    <a className="brand" href="/" aria-label="Gift Charitable Trust home">
+      <img className="brand-logo" src="/images/gift-logo.jpg" alt="Gift Charitable Trust" />
     </a>
+  );
+}
+
+function StoryCard({ s, compact = false }) {
+  return (
+    <article className={compact ? "feed-card" : "story-card"}>
+      <img className={compact ? "feed-image" : "story-image"} src={s.image} alt="" />
+      <div className="story-card-content">
+        <div className="story-top">
+          <span className="story-number">{s.number}</span>
+          <span className="tag">{s.tag}</span>
+        </div>
+        <div className="feed-meta">{s.meta || 'Gift Charitable Trust'}</div>
+        <h3>{s.title}</h3>
+        <p>{s.text}</p>
+        {compact && <span className="read-story">Read story <ArrowRight size={14}/></span>}
+      </div>
+    </article>
+  );
+}
+
+function StoriesPage() {
+  return (
+    <div className="site">
+      <header className="nav">
+        <Logo />
+        <nav className="nav-links page-nav">
+          <a href="/">Home</a>
+          <a href="/#story">Our Story</a>
+          <a href="/#work">Our Work</a>
+          <a href="/#vision">Our Vision</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <a className="nav-cta" href="/#contact">Be Part of the Journey <ArrowRight size={15}/></a>
+      </header>
+      <main className="stories-page">
+        <section className="stories-hero">
+          <div className="section-kicker">STORIES OF IMPACT</div>
+          <h1>Small acts of support.<br/><em>Human stories behind them.</em></h1>
+          <p>These stories are drawn from Gift's documented work. Beneficiary names are intentionally hidden to protect privacy, while the documented facts and figures are retained.</p>
+        </section>
+        <section className="all-stories">
+          {stories.map((s) => <StoryCard key={s.number} s={s} />)}
+        </section>
+      </main>
+      <footer>
+        <div className="footer-brand"><Logo/><p>Compassion in action.</p></div>
+        <div className="footer-nav"><a href="/">Home</a><a href="/#story">Our Story</a><a href="/#work">Our Work</a><a href="/#vision">Vision</a><a href="/#contact">Contact</a></div>
+        <div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div>
+      </footer>
+    </div>
   );
 }
 
@@ -128,7 +175,7 @@ function App() {
         <nav className={open ? 'nav-links open' : 'nav-links'}>
           <a href="#story" onClick={close}>Our Story</a>
           <a href="#work" onClick={close}>Our Work</a>
-          <a href="#impact" onClick={close}>Stories of Impact</a>
+          <a href="/stories" onClick={close}>Stories of Impact</a>
           <a href="#vision" onClick={close}>Our Vision</a>
           <a href="#contact" onClick={close}>Contact</a>
         </nav>
@@ -151,7 +198,7 @@ function App() {
                 charitable organizations and community initiatives today, while holding a bigger vision for tomorrow.
               </p>
               <div className="hero-actions">
-                <a className="button primary" href="#impact">Explore Our Impact <ArrowRight size={17}/></a>
+                <a className="button primary" href="#impact">Read Stories of Impact <ArrowRight size={17}/></a>
                 <a className="button outline" href="#vision">See Our Vision</a>
               </div>
             </div>
@@ -215,15 +262,15 @@ function App() {
 
         <section className="numbers">
           <div className="number-intro">
-            <div className="section-kicker">DOCUMENTED HIGHLIGHTS</div>
-            <h2>A few numbers.<br/><em>Many human stories.</em></h2>
-            <p>These are examples drawn from Gift’s documented past activities. They are not presented as a complete measure of the Trust’s work.</p>
+            <div className="section-kicker">THE BIGGER PICTURE</div>
+            <h2>Years of giving.<br/><em>Many ways to help.</em></h2>
+            <p>Gift's work has taken different forms over time. We keep the homepage focused on the bigger picture rather than turning every act of support into a statistic.</p>
           </div>
-          <div className="number-grid">
-            <div><strong>100</strong><span>women supported in a documented 2020 empowerment initiative</span></div>
-            <div><strong>₹1.09L</strong><span>education fees documented for seven children in three Bangalore families</span></div>
-            <div><strong>₹39K</strong><span>Dell laptop support for an engineering student</span></div>
-            <div><strong>300+</strong><span>students and parents supported with food at a Tirunelveli blind school</span></div>
+          <div className="number-grid collective">
+            <div><strong>13</strong><span>years since Gift Charitable Trust was established in 2013</span></div>
+            <div><strong>100+</strong><span>students reached through documented education-support efforts</span></div>
+            <div><strong>100+</strong><span>women reached through documented women-focused support</span></div>
+            <div><strong>300+</strong><span>students and parents reached through a documented community-care effort</span></div>
           </div>
         </section>
 
@@ -231,24 +278,14 @@ function App() {
           <div className="section-head">
             <div>
               <div className="section-kicker">STORIES OF IMPACT</div>
-              <h2>Real people.<br/>Real needs. Real support.</h2>
+              <h2>Like a good story feed:<br/><em>one human moment at a time.</em></h2>
             </div>
-            <p>Beneficiary names are intentionally hidden on this website to protect privacy. The stories below preserve the documented facts while removing identifying names.</p>
+            <p>Four stories are featured here on the homepage. The full collection lives on our Stories of Impact page. Beneficiary names remain hidden to protect privacy.</p>
           </div>
-          <div className="story-grid">
-            {stories.map((s) => (
-              <article className="story-card" key={s.number}>
-                <img className="story-image" src={s.image || '/images/story-3.svg'} alt="" />
-                <div className="story-top">
-                  <span className="story-number">{s.number}</span>
-                  <span className="tag">{s.tag}</span>
-                </div>
-                <div className="story-stat"><strong>{s.stat}</strong><span>{s.statLabel}</span></div>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </article>
-            ))}
+          <div className="featured-feed">
+            {stories.slice(0, 4).map((s) => <StoryCard key={s.number} s={s} compact />)}
           </div>
+          <div className="stories-more"><a className="button outline-dark" href="/stories">View All Stories <ArrowRight size={16}/></a></div>
         </section>
 
         <section className="vision" id="vision">
@@ -295,7 +332,7 @@ function App() {
       <footer>
         <div className="footer-brand"><Logo/><p>Compassion in action.</p></div>
         <div className="footer-nav">
-          <a href="#story">Our Story</a><a href="#work">Our Work</a><a href="#impact">Impact</a><a href="#vision">Vision</a><a href="#contact">Contact</a>
+          <a href="#story">Our Story</a><a href="#work">Our Work</a><a href="/stories">Impact</a><a href="#vision">Vision</a><a href="#contact">Contact</a>
         </div>
         <div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div>
       </footer>
@@ -303,4 +340,6 @@ function App() {
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(
+  window.location.pathname === '/stories' ? <StoriesPage /> : <App />
+);

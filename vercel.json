@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/stories",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/stories/",
+      "destination": "/index.html"
+    }
+  ]
+}

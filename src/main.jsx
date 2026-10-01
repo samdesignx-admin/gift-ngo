@@ -264,21 +264,22 @@ function App() {
           <div className="number-intro">
             <div className="section-kicker">THE BIGGER PICTURE</div>
             <h2>Years of giving.<br/><em>Many ways to help.</em></h2>
-            <p>Gift's work has taken different forms over time. We keep the homepage focused on the bigger picture rather than turning every act of support into a statistic.</p>
+            <p>Gift's work has taken different forms over time. These figures bring documented activity together without turning individual acts of support into a project report.</p>
           </div>
           <div className="number-grid collective">
             <div><strong>13</strong><span>years since Gift Charitable Trust was established in 2013</span></div>
-            <div><strong>100+</strong><span>students reached through documented education-support efforts</span></div>
-            <div><strong>100+</strong><span>women reached through documented women-focused support</span></div>
-            <div><strong>300+</strong><span>students and parents reached through a documented community-care effort</span></div>
+            <div><strong>100+</strong><span>students reached through documented education-support reach</span></div>
+            <div><strong>100+</strong><span>women reached through documented women-focused support reach</span></div>
+            <div><strong>300+</strong><span>students and parents reached through a documented community-care reach</span></div>
           </div>
+          <p className="numbers-note">Figures shown are based on documented support activities and may overlap; they are not a count of unique beneficiaries.</p>
         </section>
 
         <section className="impact" id="impact">
           <div className="section-head">
             <div>
               <div className="section-kicker">STORIES OF IMPACT</div>
-              <h2>Like a good story feed:<br/><em>one human moment at a time.</em></h2>
+              <h2>Stories worth sharing:<br/><em>one human moment at a time.</em></h2>
             </div>
             <p>Four stories are featured here on the homepage. The full collection lives on our Stories of Impact page. Beneficiary names remain hidden to protect privacy.</p>
           </div>

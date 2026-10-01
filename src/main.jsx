@@ -268,9 +268,9 @@ function App() {
           </div>
           <div className="number-grid collective">
             <div><strong>13</strong><span>years since Gift Charitable Trust was established in 2013</span></div>
-            <div><strong>100+</strong><span>students reached through documented education-support reach</span></div>
-            <div><strong>100+</strong><span>women reached through documented women-focused support reach</span></div>
-            <div><strong>300+</strong><span>students and parents reached through a documented community-care reach</span></div>
+            <div><strong>100+</strong><span>students reached through documented education support</span></div>
+            <div><strong>100+</strong><span>women reached through documented women-focused support</span></div>
+            <div><strong>300+</strong><span>students and parents reached through a documented community-care effort</span></div>
           </div>
           <p className="numbers-note">Figures shown are based on documented support activities and may overlap; they are not a count of unique beneficiaries.</p>
         </section>

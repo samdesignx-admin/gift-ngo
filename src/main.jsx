@@ -14,7 +14,7 @@ const stories = [
     stat: '₹39,000',
     statLabel: 'laptop support',
     text: 'Gift provided a Dell laptop valued at ₹39,000 to a girl from a financially disadvantaged background who was pursuing a B.E. degree at an engineering college.',
-    image: '/images/education-laptop.svg'
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Women & Livelihood',
@@ -23,7 +23,7 @@ const stories = [
     stat: '100',
     statLabel: 'women supported',
     text: 'In a documented 2020 initiative, 100 unmarried and widowed women around age 30 received advanced sewing machines and electric irons, with additional household and food support for participating families and children.',
-    image: '/images/women-sewing.svg'
+    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Education',
@@ -32,7 +32,7 @@ const stories = [
     stat: '100',
     statLabel: 'students',
     text: 'Educational stationery and provisions, including notebooks and pencil boxes, were provided to 100 students from Grade 1 through Grade 12.',
-    image: '/images/education-supplies.svg'
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Education',
@@ -41,7 +41,7 @@ const stories = [
     stat: '₹1,09,500',
     statLabel: 'education fees',
     text: 'Gift supported school fees for seven children across three families in Bangalore, covering students from Grade 3 through Grade 7.',
-    image: '/images/family-education.svg'
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Healthcare',
@@ -50,7 +50,7 @@ const stories = [
     stat: 'Ongoing',
     statLabel: 'family support',
     text: 'A family in Tirunelveli received medical provisions and treatment-related support, including transportation and facilities for care in Chennai, alongside long-term educational support for their daughter.',
-    image: '/images/medical-family.svg'
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Healthcare',
@@ -59,7 +59,7 @@ const stories = [
     stat: '₹1 lakh',
     statLabel: 'documented support',
     text: 'Gift documented support of ₹1,500 per month toward one family’s medical treatment and ₹1 lakh toward delivery and related expenses for a pregnant woman.',
-    image: '/images/medical-family.svg'
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'Community Care',
@@ -68,7 +68,7 @@ const stories = [
     stat: '300+',
     statLabel: 'students & parents',
     text: 'Gift provided food for 300 students and their parents at a blind school in Tirunelveli and also visited a school serving children with hearing and speech disabilities.',
-    image: '/images/education-supplies.svg'
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85'
   },
   {
     tag: 'COVID-19 Response',
@@ -77,28 +77,28 @@ const stories = [
     stat: '50',
     statLabel: 'helpers supported',
     text: 'During the COVID-19 period, Gift provided sanitizer, masks and herbal drinks to 50 helpers associated with an electricity board.',
-    image: '/images/frontline-support.svg'
+    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=85'
   }
 ];
 
 const futureVision = [
   {
     icon: HandHeart,
-    image: '/images/women-center.svg',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85',
     label: 'WOMEN',
     title: 'A Safe Place for Every Woman',
     text: 'A future network of women-centered rural care spaces where women can seek help privately and without shame — with menstrual care, breastfeeding space, counseling, basic diagnosis, maternity support and a secure environment.'
   },
   {
     icon: Stethoscope,
-    image: '/images/mission-hospital.svg',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85',
     label: 'HEALTHCARE',
     title: 'Gift Mission Hospital',
     text: 'A long-term vision for a high-tech multispecialty mission hospital where care is free for all, supported by advanced diagnostics, critical care, digital systems, telemedicine and compassionate clinical services.'
   },
   {
     icon: GraduationCap,
-    image: '/images/child-pathway.svg',
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=85',
     label: 'EDUCATION',
     title: 'Every Child Deserves a Chance',
     text: 'A long-term education pathway for children from economically disadvantaged and rural communities — supporting not only immediate needs, but the journey toward higher education, independence and the ability to give back.'
@@ -203,7 +203,7 @@ function App() {
               </div>
             </div>
             <aside className="hero-panel">
-              <div className="hero-image"><img src="/images/education-laptop.svg" alt="Student studying with a laptop" /></div>
+              <div className="hero-image"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85" alt="Student studying with a laptop" /></div>
               <div className="panel-icon"><Heart fill="currentColor" size={24}/></div>
               <div className="panel-label">OUR BELIEF</div>
               <h2>Good work deserves good support.</h2>
@@ -245,12 +245,12 @@ function App() {
           </div>
           <div className="work-grid">
             {[
-              [HandHeart, 'Community Support', 'Food, clothing, essential provisions and practical help for people and families facing difficult circumstances.', '/images/food-community.svg'],
-              [GraduationCap, 'Education', 'School materials, fees and longer-term educational support for children who may otherwise struggle to continue.', '/images/education-supplies.svg'],
-              [Stethoscope, 'Medical Support', 'Financial and practical assistance for treatment, transportation, medical provisions and urgent family needs.', '/images/medical-family.svg'],
-              [Users, 'Women & Families', 'Support for women, widows, children who have lost parents and families navigating financial hardship.', '/images/women-sewing.svg'],
-              [ShieldCheck, 'Support to Organizations', 'Contributions to charitable trusts, care centers and community initiatives whose work aligns with genuine need.', '/images/family-education.svg'],
-              [Heart, 'Dignity First', 'A simple principle behind every effort: people should be able to receive help without losing their dignity.', '/images/family-education.svg']
+              [HandHeart, 'Community Support', 'Food, clothing, essential provisions and practical help for people and families facing difficult circumstances.', 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=85'],
+              [GraduationCap, 'Education', 'School materials, fees and longer-term educational support for children who may otherwise struggle to continue.', 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85'],
+              [Stethoscope, 'Medical Support', 'Financial and practical assistance for treatment, transportation, medical provisions and urgent family needs.', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85'],
+              [Users, 'Women & Families', 'Support for women, widows, children who have lost parents and families navigating financial hardship.', 'https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1200&q=85'],
+              [ShieldCheck, 'Support to Organizations', 'Contributions to charitable trusts, care centers and community initiatives whose work aligns with genuine need.', 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85'],
+              [Heart, 'Dignity First', 'A simple principle behind every effort: people should be able to receive help without losing their dignity.', 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85']
             ].map(([Icon,title,text,image]) => (
               <article className="work-card" key={title}>
                 <img className="work-image" src={image} alt={title} />

@@ -108,7 +108,7 @@ const futureVision = [
 function Logo() {
   return (
     <a className="brand" href="/" aria-label="Gift Charitable Trust home">
-      <img className="brand-logo" src="/images/gift-logo.jpg" alt="Gift Charitable Trust" />
+      <img className="brand-logo" src="/images/Gift%20Logo%20New.png" alt="Gift Charitable Trust" />
     </a>
   );
 }

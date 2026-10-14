@@ -602,12 +602,78 @@ function App() {
       <footer>
         <div className="footer-brand"><Logo/><p>Compassion in action.</p></div>
         <div className="footer-nav">
-          <a href="#story">Our Story</a><a href="#work">Our Work</a><a href="/stories">Impact</a><a href="#vision">Vision</a><a href="/donate">Donate</a><a href="#contact">Contact</a>
+          <a href="#story">Our Story</a><a href="#work">Our Work</a><a href="/stories">Impact</a><a href="#vision">Vision</a><a href="/donate">Donate</a><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><a href="/donation-policy">Donations & Refunds</a><a href="#contact">Contact</a>
         </div>
         <div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div>
       </footer>
     </div>
   );
+}
+
+
+const legalPages = {
+  '/privacy-policy': {
+    title: 'Privacy Policy', updated: '14 October 2026',
+    intro: 'Gift Charitable Trust respects the privacy of people who visit this website, contact us or choose to make a donation.',
+    sections: [
+      ['Information we may collect', 'When you contact us or make a donation, we may collect information you choose to provide, such as your name, email address, phone number, donation amount, selected cause and donation reference. Basic technical information may also be processed to keep the website secure and functioning.'],
+      ['How information is used', 'We use submitted information to process and acknowledge donations, respond to enquiries, maintain financial and statutory records, prevent misuse, communicate about a transaction and meet applicable legal obligations. We do not promise that information will never be shared; limited information may be shared with payment providers, hosting and technical service providers, professional advisers or authorities where necessary and lawful.'],
+      ['Payment information', 'Payments are handled through Razorpay checkout. Gift.ngo does not ask you to enter card or bank credentials directly into this website. Payment providers process payment information under their own terms and privacy practices.'],
+      ['Public acknowledgements', 'If you select the option to keep your name off public donor acknowledgements, we will respect that preference for public acknowledgements. It does not mean we can omit information required for accounting, payment processing or legal compliance.'],
+      ['Retention and security', 'We retain records for as long as reasonably needed for the purposes described above, including applicable accounting and legal requirements. We use reasonable safeguards, but no internet transmission or storage system can be guaranteed completely secure.'],
+      ['Your choices and contact', 'You may contact info@gift.ngo to ask about personal information you submitted or to request a correction, subject to applicable legal and recordkeeping requirements. We may need to verify your identity before acting on a request.']
+    ]
+  },
+  '/terms': {
+    title: 'Website Terms of Use', updated: '14 October 2026',
+    intro: 'These terms apply to your use of gift.ngo and its donation and information pages. By using the website, you agree to use it lawfully and responsibly.',
+    sections: [
+      ['About the website', 'Gift.ngo shares information about Gift Charitable Trust, its charitable activities and ways to support its work. Website content is general information and may be updated as activities and priorities change.'],
+      ['Donations', 'A donation is voluntary. Please review the amount, frequency and selected cause before proceeding to payment. A submitted payment request is not proof that a payment succeeded; the transaction must be confirmed by the payment provider.'],
+      ['Use of funds', 'A selected cause communicates the donor’s intended area of support. Subject to applicable law and any specific written commitment accepted by the Trust, donations are administered by Gift Charitable Trust for charitable purposes and may be directed to related needs, delivery costs or urgent priorities when appropriate. Contact us before donating if you need clarification about a particular restriction.'],
+      ['Acceptable use', 'You must not misuse the website, attempt unauthorised access, interfere with its operation, submit false information or use the website for unlawful activity.'],
+      ['Third-party services', 'Payment processing and other external services may be subject to separate terms and privacy notices. Gift Charitable Trust is not responsible for third-party websites or services outside its control.'],
+      ['Changes and contact', 'We may update these terms by publishing a revised version on this page. Questions can be sent to info@gift.ngo. These terms are subject to applicable laws of India, with the competent courts having jurisdiction as determined by applicable law.']
+    ]
+  },
+  '/donation-policy': {
+    title: 'Donation, Cancellation & Refund Policy', updated: '14 October 2026',
+    intro: 'Please read this policy before completing a donation to Gift Charitable Trust.',
+    sections: [
+      ['Voluntary contributions', 'Donations are voluntary contributions toward the charitable work of Gift Charitable Trust. Please check the amount, cause and frequency carefully before authorising payment.'],
+      ['Payment confirmation', 'A donation is treated as received only after the payment provider confirms successful payment and the Trust can reconcile the transaction. If money has been debited but no confirmation is shown, please contact us with the transaction reference and date. Do not send full card numbers, PINs or passwords.'],
+      ['Cancellation and refund requests', 'Because donations may be committed to charitable activities soon after receipt, a completed donation is generally not automatically refundable. If you made a duplicate payment, entered an incorrect amount, or believe a transaction was unauthorised or processed in error, contact info@gift.ngo as soon as possible with the payment reference, amount, date and reason. We will review the request and, where appropriate, coordinate with the payment provider. Any approved refund will be returned through the original payment method where feasible and subject to payment-provider timelines and applicable law.'],
+      ['Failed or pending transactions', 'If a transaction fails or remains pending, check your bank or payment-provider status first. Any reversal for a failed transaction is handled according to the bank and payment provider’s processes. Please contact us if the amount remains debited without a successful donation confirmation.'],
+      ['Receipts and records', 'We aim to provide donation acknowledgements when the payment is confirmed and the required donor details are available. Please keep your payment confirmation for reference. An acknowledgement is not, by itself, a guarantee of tax deductibility.'],
+      ['Contact', 'For donation questions or refund requests, email info@gift.ngo and include the payment reference. Please do not email card or bank authentication details.']
+    ]
+  },
+  '/recurring-donations': {
+    title: 'Recurring Donations Policy', updated: '14 October 2026',
+    intro: 'This page explains the intended terms for monthly or yearly donations made through the website, where recurring payments are enabled for Gift Charitable Trust’s Razorpay account.',
+    sections: [
+      ['Authorisation and frequency', 'When you choose a recurring donation, review the amount and interval shown at checkout and authorise the subscription through the payment provider. The subscription is subject to successful setup and the provider’s applicable terms.'],
+      ['Charges and payment status', 'A recurring contribution may be charged at the selected interval while the subscription remains active and payment authorisation remains valid. The payment provider may notify you about authentication, failures or other subscription events. A subscription request is not confirmation that recurring payments are active; please rely on the provider’s confirmation.'],
+      ['Changing or cancelling', 'To request cancellation or assistance with a recurring donation, contact info@gift.ngo and include the email used for the donation and any subscription reference. You may also use available subscription controls provided by Razorpay or your payment method. Requests should be made before the next scheduled charge; timing may depend on the provider’s processing rules. We will confirm when we can verify the cancellation.'],
+      ['Failed payments and refunds', 'If a scheduled payment fails, the provider may retry or suspend the subscription under its rules. A completed recurring donation is subject to the Donation, Cancellation & Refund Policy. If you believe a charge is incorrect or unauthorised, contact us promptly and contact your payment provider where appropriate.'],
+      ['Availability', 'Recurring donations are offered only when enabled and available for the Trust’s account. If checkout indicates that the feature is unavailable, the subscription has not been successfully established.']
+    ]
+  },
+  '/tax-and-receipts': {
+    title: 'Donation Receipts & Tax Information', updated: '14 October 2026',
+    intro: 'Gift Charitable Trust aims to maintain appropriate donation records. Tax treatment depends on the Trust’s current registrations and approvals, the donor’s circumstances and applicable law.',
+    sections: [
+      ['Receipts', 'Please provide accurate contact details so a donation acknowledgement can be associated with your payment. If you need help locating an acknowledgement, contact info@gift.ngo with your payment reference, date and amount.'],
+      ['Tax deductions are not guaranteed', 'Do not assume a donation to the Trust qualifies for a tax deduction. Under India’s Section 80G framework, eligibility depends on the donee institution’s applicable approval and other statutory conditions. A deduction should be claimed only where the Trust is eligible for the relevant period and the donor meets the applicable requirements.'],
+      ['Required certificates and reporting', 'Where applicable and legally required, eligible institutions may have reporting and certificate obligations. The Trust will provide tax-related documentation only where it is authorised and required to do so. A payment receipt or acknowledgement alone does not establish eligibility for a deduction.'],
+      ['International donors', 'Donors outside India should not assume that a contribution is tax-deductible in their country of residence. Please seek independent tax advice for your circumstances. Cross-border contributions may also be subject to additional legal restrictions and payment-provider availability.'],
+      ['Contact', 'For questions about a receipt or the Trust’s current documentation, contact info@gift.ngo before claiming any deduction.']
+    ]
+  }
+};
+function LegalPage({page}) {
+ const data=legalPages[page] || legalPages['/terms'];
+ return <div className="site legal-site"><header className="nav"><Logo/><nav className="nav-links page-nav"><a href="/">Home</a><a href="/#work">Our Work</a><a href="/stories">Impact</a><a href="/donate">Donate</a><a href="/#contact">Contact</a></nav><a className="nav-cta" href="/donate">Donate <Heart size={15}/></a></header><main className="legal-main"><div className="section-kicker">GIFT CHARITABLE TRUST · POLICIES</div><h1>{data.title}</h1><p className="legal-updated">Last updated: {data.updated}</p><p className="legal-intro">{data.intro}</p>{data.sections.map(([heading,body])=><section className="legal-section" key={heading}><h2>{heading}</h2><p>{body}</p></section>)}<div className="legal-contact"><strong>Gift Charitable Trust</strong><p>Sankarankovil, Tamil Nadu, India</p><a href="mailto:info@gift.ngo">info@gift.ngo</a></div><a className="button primary" href="/donate">Make a donation <ArrowRight size={17}/></a></main><footer><div className="footer-brand"><Logo/><p>Compassion in action.</p></div><div className="footer-nav"><a href="/">Home</a><a href="/donate">Donate</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms of Use</a><a href="/donation-policy">Donation & Refund Policy</a><a href="/recurring-donations">Recurring Donations</a><a href="/tax-and-receipts">Receipts & Tax</a></div><div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div></footer></div>;
 }
 
 const storyPath = window.location.pathname.replace(/\/$/, '');
@@ -617,6 +683,8 @@ const selectedStory = storyMatch ? stories.find((story) => storySlug(story.title
 createRoot(document.getElementById('root')).render(
   storyPath === '/donate'
     ? <DonatePage />
+    : legalPages[storyPath]
+    ? <LegalPage page={storyPath} />
     : storyPath === '/stories'
     ? <StoriesPage />
     : selectedStory

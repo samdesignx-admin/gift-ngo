@@ -113,6 +113,213 @@ function Logo() {
   );
 }
 
+const storyDetails = {
+  "01": {
+    "kicker": "Education · Digital access",
+    "lead": "A single device can make a meaningful difference when a student is working toward a degree but lacks the tools needed to study.",
+    "sections": [
+      [
+        "The challenge",
+        "Students from rural and financially disadvantaged backgrounds can have clear ambitions for higher education and still face practical barriers: tuition costs, study materials and access to technology."
+      ],
+      [
+        "The support",
+        "Gift Charitable Trust documented providing a Dell laptop valued at ₹39,000 to a young woman from a financially disadvantaged background who was pursuing a Bachelor of Engineering degree."
+      ],
+      [
+        "Why access matters",
+        "A laptop can support research, assignments, digital learning and the everyday work of an engineering course. The documented contribution focused on one practical need that could help the student continue her studies."
+      ],
+      [
+        "A wider commitment",
+        "This story reflects Gift’s belief that educational support should respond to real barriers. Alongside individual assistance, the Trust has documented support for school fees, stationery and essential learning provisions."
+      ]
+    ],
+    "close": "Gift’s role was to provide the documented laptop support. The student’s identity is withheld to protect her privacy."
+  },
+  "02": {
+    "kicker": "Women & livelihoods · 2020 initiative",
+    "lead": "Livelihood support can offer women a practical tool to build skills, explore income opportunities and strengthen their independence.",
+    "sections": [
+      [
+        "The need",
+        "Gift developed a women’s empowerment initiative for women and girl children facing day-to-day hardship in Sivagiri and Sankarankovil, in Tamil Nadu’s Tenkasi district."
+      ],
+      [
+        "The initiative",
+        "On 18 February 2020, the Trust documented a programme supporting 100 unmarried and widowed women, around 30 years of age, with advanced sewing machines and electric irons. The programme also included kitchen items such as cooking vessels, grinders and mixers, as well as food and other provisions for girl children who had lost their parents."
+      ],
+      [
+        "Making the equipment useful",
+        "A team of five volunteers travelled to identify women and families experiencing hardship. Volunteers helped distribute the machines and, where needed, install them at recipients’ homes—an important practical step beyond handing over equipment."
+      ],
+      [
+        "A community effort",
+        "The event took place at Hamsa Heritage, Sahana Hall, Sankarankovil. Community guests and supporters attended to encourage the women and children. The Trust acknowledged the volunteers whose time helped make the initiative possible."
+      ],
+      [
+        "The longer view",
+        "The initiative was built around dignity, confidence and the possibility of greater financial independence. This is a documented programme from 2020, not a claim that the same scheme is currently running."
+      ]
+    ],
+    "close": "Figures and details are drawn from Gift’s historical report. Individual beneficiaries’ names are not displayed."
+  },
+  "03": {
+    "kicker": "Education · School essentials",
+    "lead": "For a child, having basic school supplies can help make the school day more manageable and support participation in learning.",
+    "sections": [
+      [
+        "The everyday barriers",
+        "Notebooks, pencil boxes and other learning materials are recurring expenses, and those costs can weigh heavily on families already managing basic household needs."
+      ],
+      [
+        "What Gift provided",
+        "Gift documented providing educational stationery—including notebooks, pencil boxes and other provisions—to 100 students from Grade 1 through Grade 12."
+      ],
+      [
+        "Support beyond the classroom",
+        "The Trust’s historical report also records distributing clothes and blankets to 100 women, providing masks and sanitizers to 300 rural basic workers, offering food and beverages to 300 workers, and providing equipment such as cooking vessels and small vehicles to widows seeking to sustain small businesses."
+      ],
+      [
+        "Why practical help counts",
+        "These forms of assistance addressed immediate needs while helping students and families maintain stability. They reflect a practical approach: listen to what people need, then direct support toward useful essentials."
+      ],
+      [
+        "A continuing priority",
+        "Gift’s documented work includes educational provisions for students in rural and urban communities, as well as efforts to help families who struggle with school-related costs."
+      ]
+    ],
+    "close": "These figures describe activities recorded in historical reports, not current-year totals."
+  },
+  "04": {
+    "kicker": "Education · School fee assistance",
+    "lead": "When school fees become unaffordable, children’s education can be put at risk. Targeted fee support can help families keep learning on track.",
+    "sections": [
+      [
+        "The families",
+        "Gift documented education assistance for three families in Bangalore whose children attended Mohre Public School and Sapthagiri Vidyalaya. The report described the pressure on families trying to meet school expenses while managing other necessities."
+      ],
+      [
+        "How the support was allocated",
+        "The recorded support totalled ₹1,09,500 for seven children from Grade 3 through Grade 7: ₹34,000 for two daughters in one family, ₹45,000 for three children in another family, and ₹30,500 for two children in the third family."
+      ],
+      [
+        "Keeping education within reach",
+        "School fees are a direct and time-sensitive cost. By contributing toward them, Gift aimed to help these families continue their children’s schooling instead of having educational costs become an additional source of hardship."
+      ],
+      [
+        "Part of a wider effort",
+        "The Trust’s source material also describes educational stationery and other provisions for students, reflecting a focus on both school costs and the supplies needed to participate in learning."
+      ],
+      [
+        "Privacy and dignity",
+        "The original report included family and student names. They are intentionally omitted from this public story to respect the children’s privacy."
+      ]
+    ],
+    "close": "The ₹1,09,500 total and allocation breakdown come from Gift’s historical education-support report."
+  },
+  "05": {
+    "kicker": "Healthcare · Family support",
+    "lead": "Medical hardship affects more than the person receiving treatment. It can also place pressure on a family’s transport, finances and ability to plan for the future.",
+    "sections": [
+      [
+        "Support around a difficult period",
+        "Gift’s historical material describes helping a family in the Tirunelveli area with medical provisions and treatment-related needs. The support also included practical assistance associated with accessing care in Chennai."
+      ],
+      [
+        "Looking beyond one immediate need",
+        "The account describes support that extended over time, including educational assistance for the family’s daughter. This reflects how health and household stability are connected: when a family faces medical costs, children’s needs do not disappear."
+      ],
+      [
+        "A practical, partner-aware approach",
+        "Gift collects support and contributes to people and charitable organizations addressing genuine needs. It does not operate a residential care facility or claim to provide clinical treatment itself."
+      ],
+      [
+        "What this story represents",
+        "This is an account of assistance described in the Trust’s historical materials, not a medical case report. Personal identities and private medical details are withheld."
+      ]
+    ],
+    "close": "Gift’s documented role was supportive and financial; treatment and clinical care were provided through healthcare services."
+  },
+  "06": {
+    "kicker": "Healthcare · Emergency assistance",
+    "lead": "When a medical expense cannot be postponed, timely financial help can ease some of the pressure on a family.",
+    "sections": [
+      [
+        "Monthly treatment assistance",
+        "Gift’s historical report describes providing ₹1,500 per month toward one family’s medical treatment. The recurring contribution was intended to help with an ongoing expense rather than a single one-time need."
+      ],
+      [
+        "Help with delivery expenses",
+        "The same report documents ₹1 lakh in assistance toward delivery and related expenses for a pregnant woman. The support was intended to help the family manage costs around childbirth."
+      ],
+      [
+        "Care with dignity",
+        "Medical circumstances are deeply personal. This public story keeps names and identifying details private and does not disclose clinical information that is not necessary to understand the assistance."
+      ],
+      [
+        "Part of a broader mission",
+        "The report also describes community activities including distributing food and sweets to children and families, and providing masks, sanitizers and basic provisions during the COVID-19 crisis."
+      ]
+    ],
+    "close": "These are historical figures documented by Gift Charitable Trust, not a current open programme or promise of medical funding."
+  },
+  "07": {
+    "kicker": "Community care · Food and inclusion",
+    "lead": "A shared meal can be a simple act of care—and a way to recognize children and families who are too often overlooked.",
+    "sections": [
+      [
+        "A visit focused on inclusion",
+        "Gift documented a visit to a school serving children with hearing and speech disabilities to understand needs and offer provisions. The report recognized the role such schools can play through education, skills development and supportive services."
+      ],
+      [
+        "Food for students and families",
+        "The Trust documented providing food for 300 students and their parents at a blind school in Tirunelveli. The activity brought practical assistance to a school community that included children with visual disabilities and their families."
+      ],
+      [
+        "Relief when communities are hit hard",
+        "Gift’s historical material also records support for people affected by the Chennai floods, including food, blankets, clothing and other provisions. These activities shared a common purpose: respond to urgent basic needs when people are vulnerable."
+      ],
+      [
+        "Partnership makes the work possible",
+        "Gift contributes support and works alongside community organizations, rather than claiming to operate the schools or provide specialist services itself."
+      ],
+      [
+        "Respect and access",
+        "The story focuses on the community and the assistance provided, not on portraying disability as a limitation or identifying individual children."
+      ]
+    ],
+    "close": "These school activities and figures are drawn from historical reports; partner institutions delivered their own education and support services."
+  },
+  "08": {
+    "kicker": "Community care · COVID-19 response",
+    "lead": "During a public-health emergency, basic protective supplies and food can help support the people who keep essential services running.",
+    "sections": [
+      [
+        "The context",
+        "Gift’s historical reports describe the economic strain and shortages many families and rural workers experienced during COVID-19. Loss of income and limited access to essentials made day-to-day life more difficult."
+      ],
+      [
+        "Protective supplies for workers",
+        "One documented initiative provided face masks and sanitizers to 300 basic workers living in rural areas. Another report describes distributing sanitizer, masks and herbal drinks to 50 helpers associated with an electricity board."
+      ],
+      [
+        "Food and essentials",
+        "The Trust also recorded providing food and beverages to 300 basic workers, along with clothes and blankets for women in need. These activities addressed immediate, practical needs during a period of uncertainty."
+      ],
+      [
+        "A collective response",
+        "The reports describe community support as a shared effort made possible through volunteers, donors and people willing to contribute. Small, useful items were one way to offer care and solidarity."
+      ],
+      [
+        "A historical record",
+        "These figures describe past COVID-era activities and are not presented as a current distribution programme."
+      ]
+    ],
+    "close": "This story summarizes activities recorded in Gift’s historical reports and does not imply the COVID-era initiative is still active."
+  }
+};
+
 function storySlug(title) {
   return title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -151,16 +358,15 @@ function StoryDetailPage({ story }) {
       <main className="story-detail-page">
         <div className="story-detail-wrap">
           <a className="story-back" href="/stories">← All stories</a>
-          <div className="section-kicker">{story.tag} · STORY {story.number}</div>
+          <div className="section-kicker">{(storyDetails[story.number] && storyDetails[story.number].kicker) || story.tag} · STORY {story.number}</div>
           <h1>{story.title}</h1>
-          <p className="story-detail-intro">{story.text}</p>
+          <p className="story-detail-intro">{(storyDetails[story.number] && storyDetails[story.number].lead) || story.text}</p>
           <img className="story-detail-image" src={story.image} alt="" />
           <div className="story-detail-copy">
-            <p>{story.text}</p>
-            <aside className="story-detail-note"><ShieldCheck size={20}/><span>Beneficiary identities are intentionally kept private. This story shares the documented initiative without revealing personal details.</span></aside>
+            {(storyDetails[story.number]?.sections || [["The story", story.text]]).map(([heading, paragraph]) => <section className="story-chapter" key={heading}><h2>{heading}</h2><p>{paragraph}</p></section>)}
+            <aside className="story-detail-note"><ShieldCheck size={20}/><span>{storyDetails[story.number]?.close || "Beneficiary identities are intentionally kept private."}</span></aside>
             <a className="button outline-dark" href="/stories">Explore all stories <ArrowRight size={16}/></a>
-          </div>
-          {related.length > 0 && <section className="story-related"><div className="section-kicker">MORE STORIES</div><h2>More from {story.tag}</h2><div className="featured-feed">{related.map((item) => <StoryCard key={item.number} s={item} compact />)}</div></section>}
+          </div>         {related.length > 0 && <section className="story-related"><div className="section-kicker">MORE STORIES</div><h2>More from {story.tag}</h2><div className="featured-feed">{related.map((item) => <StoryCard key={item.number} s={item} compact />)}</div></section>}
         </div>
       </main>
       <footer>

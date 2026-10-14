@@ -19,6 +19,46 @@
     {
       "source": "/stories/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/donation-policy",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/donation-policy/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/recurring-donations",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/recurring-donations/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tax-and-receipts",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tax-and-receipts/",
+      "destination": "/index.html"
     }
   ]
 }

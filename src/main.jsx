@@ -382,8 +382,8 @@ function App() {
   );
 }
 
-const storyPath = window.location.pathname.replace(/\\/$/, '');
-const storyMatch = storyPath.match(/^\\/stories\\/([^/]+)$/);
+const storyPath = window.location.pathname.replace(/\/$/, '');
+const storyMatch = storyPath.match(/^\/stories\/([^/]+)$/);
 const selectedStory = storyMatch ? stories.find((story) => storySlug(story.title) === storyMatch[1]) : null;
 
 createRoot(document.getElementById('root')).render(

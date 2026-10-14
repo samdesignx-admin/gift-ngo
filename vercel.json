@@ -9,6 +9,14 @@
       "destination": "/index.html"
     },
     {
+      "source": "/donation-success",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/donation-success/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/stories",
       "destination": "/index.html"
     },

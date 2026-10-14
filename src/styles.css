@@ -297,3 +297,11 @@ footer{background:#101010;color:#fff;padding:45px 8vw;display:grid;grid-template
 .receipt-card .button{display:inline-flex;align-items:center;gap:8px}
 @media(max-width:600px){.receipt-main{padding:32px 14px 48px}.receipt-card{border-radius:18px;padding:24px 18px}.receipt-details>div{gap:12px}.receipt-details span{flex-basis:34%;font-size:.9rem}.receipt-details strong{font-size:.92rem}.receipt-amount{font-size:1.9rem}}
 @media print{.nav,.receipt-download,.receipt-help,.receipt-home,footer{display:none!important}.receipt-main{padding:0}.receipt-card{box-shadow:none;border:0}}
+
+
+/* Donation payment verification state */
+.payment-spinner{width:54px;height:54px;margin:0 auto 24px;border:5px solid #f4d6d8;border-top-color:#d92f3a;border-radius:50%;animation:gift-payment-spin .8s linear infinite}
+.processing-card{text-align:center}
+.processing-card .receipt-lead{max-width:520px;margin:0 auto 18px}
+@keyframes gift-payment-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.payment-spinner{animation-duration:1.8s}}

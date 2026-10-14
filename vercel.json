@@ -7,6 +7,10 @@
     {
       "source": "/stories/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/stories/:path*",
+      "destination": "/index.html"
     }
   ]
 }

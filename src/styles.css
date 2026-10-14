@@ -205,3 +205,11 @@ footer{background:#101010;color:#fff;padding:45px 8vw;display:grid;grid-template
 .story-related{padding-top:70px}
 .story-related h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.035em;margin:12px 0 28px}
 @media(max-width:620px){.story-detail-wrap{padding:36px 7vw 65px}.story-back{margin-bottom:30px}.story-detail-image{margin-top:24px}.story-detail-copy{font-size:16px}.story-related{padding-top:50px}}
+
+/* Long-form impact story editorial layout */
+.story-detail-copy{max-width:780px;padding-top:38px}
+.story-chapter{margin:0 0 34px}
+.story-chapter h2{margin:0 0 10px;color:#211f1e;font-size:clamp(23px,3vw,30px);line-height:1.2;letter-spacing:-.025em}
+.story-chapter p{margin:0;color:#55514e;font-size:17px;line-height:1.9}
+.story-detail-note{margin-top:38px}
+@media(max-width:620px){.story-chapter{margin-bottom:28px}.story-chapter p{font-size:16px;line-height:1.8}.story-chapter h2{font-size:23px}}

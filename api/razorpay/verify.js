@@ -10,7 +10,7 @@ export default async function handler(req,res){
  const expected=crypto.createHmac('sha256',secret).update(b.razorpay_order_id+'|'+b.razorpay_payment_id).digest('hex'),actual=String(b.razorpay_signature),a=Buffer.from(expected,'hex'),c=Buffer.from(actual,'hex');
  if(a.length!==c.length||!crypto.timingSafeEqual(a,c))return json(res,400,{verified:false,error:'Payment signature could not be verified.'});
  const pr=await fetch('https://api.razorpay.com/v1/payments/'+encodeURIComponent(b.razorpay_payment_id),{headers:{Authorization:'Basic '+Buffer.from(keyId+':'+secret).toString('base64')}}),p=await pr.json();
- if(!pr.ok||!['captured','authorized'].includes(p.status)||p.order_id!==b.razorpay_order_id)return json(res,400,{verified:false,error:'Payment is not yet confirmed as successful.'});
+ if(!pr.ok||p.status!=='captured'||p.order_id!==b.razorpay_order_id)return json(res,400,{verified:false,error:'Payment is not yet confirmed as successful.'});
  return json(res,200,{verified:true,paymentId:p.id});
  }
  if(b.razorpay_subscription_id&&b.razorpay_payment_id&&b.razorpay_signature){

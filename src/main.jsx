@@ -113,21 +113,62 @@ function Logo() {
   );
 }
 
+function storySlug(title) {
+  return title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
 function StoryCard({ s, compact = false }) {
   return (
     <article className={compact ? "feed-card" : "story-card"}>
-      <img className={compact ? "feed-image" : "story-image"} src={s.image} alt="" />
+      <a className="story-card-image-link" href={`/stories/${storySlug(s.title)}`} aria-label={`Read ${s.title}`}>
+        <img className={compact ? "feed-image" : "story-image"} src={s.image} alt="" />
+      </a>
       <div className="story-card-content">
         <div className="story-top">
           <span className="story-number">{s.number}</span>
           <span className="tag">{s.tag}</span>
         </div>
         <div className="feed-meta">{s.meta || 'Gift Charitable Trust'}</div>
-        <h3>{s.title}</h3>
+        <h3><a className="story-title-link" href={`/stories/${storySlug(s.title)}`}>{s.title}</a></h3>
         <p>{s.text}</p>
-        {compact && <span className="read-story">Read story <ArrowRight size={14}/></span>}
+        <a className="read-story" href={`/stories/${storySlug(s.title)}`}>Read story <ArrowRight size={14}/></a>
       </div>
     </article>
+  );
+}
+
+function StoryDetailPage({ story }) {
+  const related = stories.filter((item) => item.number !== story.number && item.tag === story.tag).slice(0, 2);
+  return (
+    <div className="site">
+      <header className="nav">
+        <Logo />
+        <nav className="nav-links page-nav">
+          <a href="/">Home</a><a href="/#story">Our Story</a><a href="/#work">Our Work</a><a href="/stories">Stories of Impact</a><a href="/#contact">Contact</a>
+        </nav>
+        <a className="nav-cta" href="/#contact">Be Part of the Journey <ArrowRight size={15}/></a>
+      </header>
+      <main className="story-detail-page">
+        <div className="story-detail-wrap">
+          <a className="story-back" href="/stories">← All stories</a>
+          <div className="section-kicker">{story.tag} · STORY {story.number}</div>
+          <h1>{story.title}</h1>
+          <p className="story-detail-intro">{story.text}</p>
+          <img className="story-detail-image" src={story.image} alt="" />
+          <div className="story-detail-copy">
+            <p>{story.text}</p>
+            <aside className="story-detail-note"><ShieldCheck size={20}/><span>Beneficiary identities are intentionally kept private. This story shares the documented initiative without revealing personal details.</span></aside>
+            <a className="button outline-dark" href="/stories">Explore all stories <ArrowRight size={16}/></a>
+          </div>
+          {related.length > 0 && <section className="story-related"><div className="section-kicker">MORE STORIES</div><h2>More from {story.tag}</h2><div className="featured-feed">{related.map((item) => <StoryCard key={item.number} s={item} compact />)}</div></section>}
+        </div>
+      </main>
+      <footer>
+        <div className="footer-brand"><Logo/><p>Compassion in action.</p></div>
+        <div className="footer-nav"><a href="/">Home</a><a href="/stories">Stories of Impact</a><a href="/#vision">Vision</a><a href="/#contact">Contact</a></div>
+        <div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div>
+      </footer>
+    </div>
   );
 }
 
@@ -341,6 +382,14 @@ function App() {
   );
 }
 
+const storyPath = window.location.pathname.replace(/\\/$/, '');
+const storyMatch = storyPath.match(/^\\/stories\\/([^/]+)$/);
+const selectedStory = storyMatch ? stories.find((story) => storySlug(story.title) === storyMatch[1]) : null;
+
 createRoot(document.getElementById('root')).render(
-  window.location.pathname === '/stories' ? <StoriesPage /> : <App />
+  storyPath === '/stories'
+    ? <StoriesPage />
+    : selectedStory
+      ? <StoryDetailPage story={selectedStory} />
+      : <App />
 );

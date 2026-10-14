@@ -691,7 +691,11 @@ const storyMatch = storyPath.match(/^\/stories\/([^/]+)$/);
 const selectedStory = storyMatch ? stories.find((story) => storySlug(story.title) === storyMatch[1]) : null;
 
 createRoot(document.getElementById('root')).render(
-  storyPath === '/donate'\n    ? <DonatePage />\n    : storyPath === '/donation-success'\n    ? <DonationSuccessPage />\n    : legalPages[storyPath]
+  storyPath === '/donate'
+    ? <DonatePage />
+    : storyPath === '/donation-success'
+    ? <DonationSuccessPage />
+    : legalPages[storyPath]
     ? <LegalPage page={storyPath} />
     : storyPath === '/stories'
     ? <StoriesPage />

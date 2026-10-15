@@ -50,7 +50,7 @@ const stories = [
     stat: 'Ongoing',
     statLabel: 'family support',
     text: 'A family in Tirunelveli received medical provisions and treatment-related support, including transportation and facilities for care in Chennai, alongside long-term educational support for their daughter.',
-    image: '/images/healthcare-family.png'
+    image: '/images/story-medical-child.svg'
   },
   {
     tag: 'Healthcare',
@@ -59,7 +59,7 @@ const stories = [
     stat: '₹1 lakh',
     statLabel: 'documented support',
     text: 'Gift documented support of ₹1,500 per month toward one family’s medical treatment and ₹1 lakh toward delivery and related expenses for a pregnant woman.',
-    image: '/images/healthcare-family.png'
+    image: '/images/story-medical-recovery.svg'
   },
   {
     tag: 'Community Care',
@@ -77,7 +77,7 @@ const stories = [
     stat: '50',
     statLabel: 'helpers supported',
     text: 'During the COVID-19 period, Gift provided sanitizer, masks and herbal drinks to 50 helpers associated with an electricity board.',
-    image: '/images/frontline-support.svg'
+    image: '/images/story-family-relief.svg'
   }
 ];
 

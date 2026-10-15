@@ -14,7 +14,7 @@ const stories = [
     stat: '₹39,000',
     statLabel: 'laptop support',
     text: 'Gift provided a Dell laptop valued at ₹39,000 to a girl from a financially disadvantaged background who was pursuing a B.E. degree at an engineering college.',
-    image: '/images/hero-student.png'
+    image: '/images/family-education.png'
   },
   {
     tag: 'Women & Livelihood',
@@ -41,7 +41,7 @@ const stories = [
     stat: '₹1,09,500',
     statLabel: 'education fees',
     text: 'Gift supported school fees for seven children across three families in Bangalore, covering students from Grade 3 through Grade 7.',
-    image: '/images/family-education.png'
+    image: '/images/hero-student.png'
   },
   {
     tag: 'Healthcare',

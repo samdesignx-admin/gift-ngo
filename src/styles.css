@@ -124,6 +124,7 @@ button{font:inherit}
 .contact-card span{font-size:10px;color:#ffd1d2}
 
 footer{background:#101010;color:#fff;padding:45px 8vw;display:grid;grid-template-columns:1fr auto;gap:30px}
+.footer-brand .brand-logo{filter:brightness(0) invert(1)}
 .footer-brand p{color:#777;font-size:11px;margin:15px 0 0}
 .footer-nav{display:flex;gap:22px;font-size:11px;color:#aaa;align-items:center}
 .footer-nav a:hover{color:#fff}

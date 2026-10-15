@@ -13,10 +13,10 @@ button{font:inherit}
 .nav{height:82px;padding:0 5.5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.96);border-bottom:1px solid #eceae5;position:sticky;top:0;z-index:50;backdrop-filter:blur(14px)}
 .brand{display:flex;align-items:center;height:66px;line-height:0}
 .brand-logo{display:block;width:132px;height:66px;max-width:132px;object-fit:contain;object-position:center;flex:none}
-.nav-links{display:flex;gap:28px;font-size:13px;color:#4c4b49}
+.nav-links{display:none;gap:28px;font-size:13px;color:#4c4b49}
 .nav-links a:hover{color:var(--red)}
 .nav-cta{display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:12px 17px;border-radius:100px;font-size:12px;font-weight:700}
-.menu{display:none;background:none;border:0;color:var(--ink)}
+.menu{display:block;background:none;border:0;color:var(--ink);padding:7px;cursor:pointer}.nav-tools{display:flex;align-items:center;gap:8px}.language-control select{border:1px solid #dedbd3;border-radius:999px;background:#fff;color:#222;padding:8px 10px;font-size:12px}
 
 .hero{min-height:720px;background:#141414;color:#fff;position:relative;padding:95px 8vw 30px;display:flex;flex-direction:column;justify-content:center}
 .hero-inner{width:100%;max-width:1320px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:8vw;align-items:center;position:relative;z-index:2}
@@ -131,7 +131,7 @@ footer{background:#101010;color:#fff;padding:45px 8vw;display:grid;grid-template
 .footer-legal{grid-column:1/-1;border-top:1px solid #2b2b2b;padding-top:22px;display:flex;justify-content:space-between;color:#666;font-size:9px;letter-spacing:.5px}
 
 @media(max-width:950px){
-  .nav{padding:0 5vw}.nav-links,.nav-cta{display:none}.menu{display:block}
+  .nav{padding:0 5vw}.nav-cta{display:none}.menu{display:block}.nav-tools{gap:5px}.language-control select{max-width:96px;padding:7px 6px;font-size:11px}
   .nav-links.open{display:flex;position:absolute;top:81px;left:0;right:0;padding:23px 5vw;gap:20px;flex-direction:column;background:#fff;border-bottom:1px solid #ddd}
   .hero{padding:75px 7vw 25px}.hero-inner{grid-template-columns:1fr}.hero-panel{max-width:430px}.hero-bottom{margin-top:55px}
   .intro,.work,.impact,.vision{padding-left:7vw;padding-right:7vw}

@@ -353,7 +353,7 @@ function StoryDetailPage({ story }) {
         <nav className="nav-links page-nav">
           <a href="/">Home</a><a href="/#story">Our Story</a><a href="/#work">Our Work</a><a href="/stories">Stories of Impact</a><a href="/#contact">Contact</a><a href="/donate">Donate</a><a href="/donate">Donate</a>
         </nav>
-        <a className="nav-cta" href="/donate">Donate <Heart size={15}/></a>
+        <a className="nav-cta" href="/donate">{t('donate')} <Heart size={15}/></a>
       </header>
       <main className="story-detail-page">
         <div className="story-detail-wrap">
@@ -439,8 +439,17 @@ function DonationSuccessPage() {
  return <div className="site legal-site"><header className="nav"><Logo/><nav className="nav-links page-nav"><a href="/">Home</a><a href="/stories">Stories of Impact</a><a href="/donate">Donate</a></nav><a className="nav-cta" href="/donate">Donate <Heart size={15}/></a></header><main className="receipt-main"><div className="receipt-card"><div className="receipt-check"><CheckCircle2 size={42}/></div><div className="section-kicker">PAYMENT CONFIRMED</div><h1>Thank you for your generosity.</h1><p className="receipt-lead">Your donation to Gift Charitable Trust has been verified. Keep this acknowledgement for your records.</p><button className="button primary receipt-download" onClick={downloadReceipt}>Download donation receipt <ArrowRight size={17}/></button><div className="receipt-amount">₹{Number(receipt.amount||0).toLocaleString('en-IN')}</div><div className="receipt-details"><div><span>Donor</span><strong>{receipt.donor?.name}</strong></div><div><span>Email</span><strong>{receipt.donor?.email}</strong></div><div><span>Purpose</span><strong>{causes[receipt.campaign]||receipt.campaign}</strong></div><div><span>Frequency</span><strong>{receipt.frequency==='once'?'One-time':receipt.frequency}</strong></div><div><span>Payment reference</span><strong>{receipt.paymentId||receipt.subscriptionId||'Verified'}</strong></div><div><span>Payment date</span><strong>{receipt.paymentDate?new Date(receipt.paymentDate*1000).toLocaleString('en-IN'):new Date(receipt.verifiedAt||Date.now()).toLocaleString('en-IN')}</strong></div><div><span>Status</span><strong>Verified{receipt.captured?' & captured':''}</strong></div></div><div className="receipt-tax"><h2>Section 80G Tax Exemption</h2><p>Gift Charitable Trust holds valid approval under Section 80G of the Income-tax Act, 1961.</p><p>Eligible donors may claim a deduction for their donations, subject to applicable income-tax laws, prescribed limits and their individual tax circumstances, including the tax regime applicable to them. The deduction available, if any, depends on the donor’s eligibility and applicable tax provisions.</p><p>This receipt acknowledges your contribution. Please retain it for your records.</p></div><p className="receipt-help">Need help? <a href="mailto:care@gift.ngo">care@gift.ngo</a></p><a href="/" className="receipt-home">Return to Gift Charitable Trust</a></div></main><footer><div className="footer-brand"><Logo/></div><div className="footer-nav"><a href="/">Home</a><a href="/donate">Donate</a><a href="/donation-policy">Donation & Refund Policy</a><a href="/tax-and-receipts">Receipts & Tax</a><a href="mailto:care@gift.ngo">Contact</a></div><div className="footer-legal"><span>Gift Charitable Trust · Sankarankovil, Tamil Nadu</span><span>© {new Date().getFullYear()} Gift Charitable Trust</span></div></footer></div>;
 }
 
+const siteTranslations = {
+  en: { story:'Our Story', work:'Our Work', impact:'Stories of Impact', vision:'Our Vision', contact:'Contact', donate:'Donate', established:'ESTABLISHED IN SANKARANKOVIL · 2013', heroTitle:'A Gift Today.', heroTitle2:'A Better Tomorrow.', heroLead:'Gift Charitable Trust connects generosity with meaningful change — supporting people, charitable organizations and community initiatives today, while holding a bigger vision for tomorrow.', support:'Support Our Work', readStories:'Read Stories of Impact', seeVision:'See Our Vision', belief:'OUR BELIEF', beliefTitle:'Good work deserves good support.', beliefText:'We don’t have to do everything ourselves to make a difference.', collect:'COLLECT · CONTRIBUTE · CONNECT · CARE', language:'Language' },
+  ta: { story:'எங்கள் கதை', work:'எங்கள் பணி', impact:'சேவையின் தாக்கம்', vision:'எங்கள் தொலைநோக்கு', contact:'தொடர்பு', donate:'நன்கொடை', established:'சங்கரன்கோவிலில் தொடக்கம் · 2013', heroTitle:'இன்றைய அன்பளிப்பு.', heroTitle2:'சிறந்த நாளைய உலகம்.', heroLead:'கிஃப்ட் அறக்கட்டளை, மக்களின் வாழ்வில் அர்த்தமுள்ள மாற்றத்தை உருவாக்க நன்கொடைகளையும் சமூகப் பணிகளையும் இணைக்கிறது.', support:'எங்கள் பணிக்கு ஆதரவு', readStories:'சேவையின் தாக்கக் கதைகள்', seeVision:'எங்கள் தொலைநோக்கைப் பாருங்கள்', belief:'எங்கள் நம்பிக்கை', beliefTitle:'நல்ல பணிக்கு நல்ல ஆதரவு தேவை.', beliefText:'மாற்றத்தை உருவாக்க நாம் எல்லாவற்றையும் தனியாகச் செய்ய வேண்டியதில்லை.', collect:'திரட்டுங்கள் · வழங்குங்கள் · இணைவோம் · அக்கறை கொள்வோம்', language:'மொழி' },
+  hi: { story:'हमारी कहानी', work:'हमारा कार्य', impact:'प्रभाव की कहानियाँ', vision:'हमारा दृष्टिकोण', contact:'संपर्क', donate:'दान करें', established:'संकऱनकोविल में स्थापना · 2013', heroTitle:'आज का उपहार।', heroTitle2:'बेहतर कल।', heroLead:'गिफ्ट चैरिटेबल ट्रस्ट उदारता को सार्थक बदलाव से जोड़ता है और लोगों, धर्मार्थ संगठनों तथा सामुदायिक पहलों का समर्थन करता है।', support:'हमारे कार्य का समर्थन करें', readStories:'प्रभाव की कहानियाँ पढ़ें', seeVision:'हमारा दृष्टिकोण देखें', belief:'हमारा विश्वास', beliefTitle:'अच्छे कार्य को अच्छे सहयोग की ज़रूरत है।', beliefText:'बदलाव लाने के लिए हमें सब कुछ अकेले करने की ज़रूरत नहीं है।', collect:'संग्रह · योगदान · जुड़ाव · देखभाल', language:'भाषा' }
+};
+
 function App() {
   const [open, setOpen] = React.useState(false);
+  const [language, setLanguage] = React.useState(() => localStorage.getItem('gift-language') || 'en');
+  const t = (key) => siteTranslations[language]?.[key] || siteTranslations.en[key] || key;
+  const changeLanguage = (event) => { const value = event.target.value; setLanguage(value); localStorage.setItem('gift-language', value); };
   const close = () => setOpen(false);
 
   return (
@@ -448,18 +457,18 @@ function App() {
       <header className="nav">
         <Logo />
         <nav className={open ? 'nav-links open' : 'nav-links'}>
-          <a href="#story" onClick={close}>Our Story</a>
-          <a href="#work" onClick={close}>Our Work</a>
-          <a href="/stories" onClick={close}>Stories of Impact</a>
-          <a href="#vision" onClick={close}>Our Vision</a>
-          <a href="#contact" onClick={close}>Contact</a>
-          <a href="/donate" onClick={close}>Donate</a>
+          <a href="#story" onClick={close}>{t('story')}</a>
+          <a href="#work" onClick={close}>{t('work')}</a>
+          <a href="/stories" onClick={close}>{t('impact')}</a>
+          <a href="#vision" onClick={close}>{t('vision')}</a>
+          <a href="#contact" onClick={close}>{t('contact')}</a>
+          <a href="/donate" onClick={close}>{t('donate')}</a>
           <a href="/donate" onClick={close}>Donate</a>
         </nav>
         <a className="nav-cta" href="/donate">Donate <Heart size={15}/></a>
-        <button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
+        <div className="nav-tools"><label className="language-control"><span className="sr-only">{t('language')}</span><select aria-label={t('language')} value={language} onChange={changeLanguage}><option value="en">English</option><option value="ta">தமிழ்</option><option value="hi">हिन्दी</option></select></label><button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
           {open ? <X/> : <Menu/>}
-        </button>
+        </button></div>
       </header>
 
       <main id="top">
@@ -468,26 +477,25 @@ function App() {
           <div className="hero-orb orb-two" />
           <div className="hero-inner">
             <div className="hero-copy">
-              <div className="eyebrow"><span /> ESTABLISHED IN SANKARANKOVIL · 2013</div>
-              <h1>A Gift Today.<br/><em>A Better Tomorrow.</em></h1>
+              <div className="eyebrow"><span /> {t('established')}</div>
+              <h1>{t('heroTitle')}<br/><em>{t('heroTitle2')}</em></h1>
               <p className="hero-lead">
-                Gift Charitable Trust connects generosity with meaningful change — supporting people,
-                charitable organizations and community initiatives today, while holding a bigger vision for tomorrow.
+                {t('heroLead')}
               </p>
               <div className="hero-actions">
-                <a className="button primary" href="/donate">Support Our Work <Heart size={17}/></a>
-                <a className="button outline" href="#impact">Read Stories of Impact <ArrowRight size={17}/></a>
-                <a className="button outline" href="#vision">See Our Vision</a>
+                <a className="button primary" href="/donate">{t('support')} <Heart size={17}/></a>
+                <a className="button outline" href="#impact">{t('readStories')} <ArrowRight size={17}/></a>
+                <a className="button outline" href="#vision">{t('seeVision')}</a>
               </div>
             </div>
             <aside className="hero-panel">
               <div className="hero-image"><img src="/images/hero-student.png" alt="A student looking ahead on a school campus" /></div>
               <div className="panel-icon"><Heart fill="currentColor" size={24}/></div>
-              <div className="panel-label">OUR BELIEF</div>
-              <h2>Good work deserves good support.</h2>
-              <p>We don't have to do everything ourselves to make a difference.</p>
+              <div className="panel-label">{t('belief')}</div>
+              <h2>{t('beliefTitle')}</h2>
+              <p>{t('beliefText')}</p>
               <div className="panel-rule"/>
-              <span>COLLECT · CONTRIBUTE · CONNECT · CARE</span>
+              <span>{t('collect')}</span>
             </aside>
           </div>
           <div className="hero-bottom">

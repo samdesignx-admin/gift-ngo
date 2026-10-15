@@ -394,7 +394,7 @@ function StoriesPage() {
       </header>
       <main className="stories-page">
         <section className="stories-hero">
-          <div className="section-kicker">STORIES OF IMPACT</div>
+          <div className="section-kicker">{tx("STORIES OF IMPACT", language)}</div>
           <h1>Small acts of support.<br/><em>Human stories behind them.</em></h1>
           <p>These stories are drawn from Gift's documented work. Beneficiary names are intentionally hidden to protect privacy, while the documented facts and figures are retained.</p>
         </section>
@@ -442,8 +442,18 @@ function DonationSuccessPage() {
 const siteTranslations = {
   en: { story:'Our Story', work:'Our Work', impact:'Stories of Impact', vision:'Our Vision', contact:'Contact', donate:'Donate', established:'ESTABLISHED IN SANKARANKOVIL · 2013', heroTitle:'A Gift Today.', heroTitle2:'A Better Tomorrow.', heroLead:'Gift Charitable Trust connects generosity with meaningful change — supporting people, charitable organizations and community initiatives today, while holding a bigger vision for tomorrow.', support:'Support Our Work', readStories:'Read Stories of Impact', seeVision:'See Our Vision', belief:'OUR BELIEF', beliefTitle:'Good work deserves good support.', beliefText:'We don’t have to do everything ourselves to make a difference.', collect:'COLLECT · CONTRIBUTE · CONNECT · CARE', language:'Language' },
   ta: { story:'எங்கள் கதை', work:'எங்கள் பணி', impact:'சேவையின் தாக்கம்', vision:'எங்கள் தொலைநோக்கு', contact:'தொடர்பு', donate:'நன்கொடை', established:'சங்கரன்கோவிலில் தொடக்கம் · 2013', heroTitle:'இன்றைய அன்பளிப்பு.', heroTitle2:'சிறந்த நாளைய உலகம்.', heroLead:'கிஃப்ட் அறக்கட்டளை, மக்களின் வாழ்வில் அர்த்தமுள்ள மாற்றத்தை உருவாக்க நன்கொடைகளையும் சமூகப் பணிகளையும் இணைக்கிறது.', support:'எங்கள் பணிக்கு ஆதரவு', readStories:'சேவையின் தாக்கக் கதைகள்', seeVision:'எங்கள் தொலைநோக்கைப் பாருங்கள்', belief:'எங்கள் நம்பிக்கை', beliefTitle:'நல்ல பணிக்கு நல்ல ஆதரவு தேவை.', beliefText:'மாற்றத்தை உருவாக்க நாம் எல்லாவற்றையும் தனியாகச் செய்ய வேண்டியதில்லை.', collect:'திரட்டுங்கள் · வழங்குங்கள் · இணைவோம் · அக்கறை கொள்வோம்', language:'மொழி' },
-  hi: { story:'हमारी कहानी', work:'हमारा कार्य', impact:'प्रभाव की कहानियाँ', vision:'हमारा दृष्टिकोण', contact:'संपर्क', donate:'दान करें', established:'संकऱनकोविल में स्थापना · 2013', heroTitle:'आज का उपहार।', heroTitle2:'बेहतर कल।', heroLead:'गिफ्ट चैरिटेबल ट्रस्ट उदारता को सार्थक बदलाव से जोड़ता है और लोगों, धर्मार्थ संगठनों तथा सामुदायिक पहलों का समर्थन करता है।', support:'हमारे कार्य का समर्थन करें', readStories:'प्रभाव की कहानियाँ पढ़ें', seeVision:'हमारा दृष्टिकोण देखें', belief:'हमारा विश्वास', beliefTitle:'अच्छे कार्य को अच्छे सहयोग की ज़रूरत है।', beliefText:'बदलाव लाने के लिए हमें सब कुछ अकेले करने की ज़रूरत नहीं है।', collect:'संग्रह · योगदान · जुड़ाव · देखभाल', language:'भाषा' }
+  hi: { story:'हमारी कहानी', work:'हमारा कार्य', impact:'प्रभाव की कहानियाँ', vision:'हमारा दृष्टिकोण', contact:'संपर्क', donate:'दान करें', established:'संकरनकोविल में स्थापना · 2013', heroTitle:'आज का उपहार।', heroTitle2:'बेहतर कल।', heroLead:'गिफ्ट चैरिटेबल ट्रस्ट उदारता को सार्थक बदलाव से जोड़ता है और लोगों, धर्मार्थ संगठनों तथा सामुदायिक पहलों का समर्थन करता है।', support:'हमारे कार्य में सहयोग दें', readStories:'प्रभाव की कहानियाँ पढ़ें', seeVision:'हमारा दृष्टिकोण देखें', belief:'हमारा विश्वास', beliefTitle:'अच्छे कार्य को अच्छे सहयोग की ज़रूरत है।', beliefText:'बदलाव लाने के लिए हमें सब कुछ अकेले करने की ज़रूरत नहीं है।', collect:'संग्रह · योगदान · जुड़ाव · देखभाल', language:'भाषा' }
 };
+
+const contentTranslations = {
+  ta: {
+    'OUR STORY':'எங்கள் கதை','Started with a simple belief:':'ஒரு எளிய நம்பிக்கையுடன் தொடங்கினோம்:','help should reach people.':'உதவி தேவைப்படுவோரிடம் சென்றடைய வேண்டும்.','OUR WORK':'எங்கள் பணி','Support where it':'உதவி தேவைப்படும் இடங்களில்','can matter most.':'அதிக மாற்றத்தை ஏற்படுத்தட்டும்.','THE BIGGER PICTURE':'பெரிய நோக்கம்','Years of giving.':'பல ஆண்டுகளாக சேவை.','Many ways to help.':'உதவ பல வழிகள்.','STORIES OF IMPACT':'சேவையின் தாக்கக் கதைகள்','Stories worth sharing:':'பகிரத் தகுந்த கதைகள்:','one human moment at a time.':'ஒவ்வொரு மனிதரின் அனுபவத்திலும்.','OUR VISION':'எங்கள் தொலைநோக்கு','CONTACT':'தொடர்பு','Our Story':'எங்கள் கதை','Our Work':'எங்கள் பணி','Our Vision':'எங்கள் தொலைநோக்கு','Contact':'தொடர்பு','Donate':'நன்கொடை','Community Support':'சமூக ஆதரவு','Education':'கல்வி','Medical Support':'மருத்துவ உதவி','Women & Families':'பெண்கள் மற்றும் குடும்பங்கள்','Support to Organizations':'அமைப்புகளுக்கு ஆதரவு','Dignity First':'மரியாதையே முதன்மை','Gift Charitable Trust was established in Sankarankovil in 2013 with a purpose of supporting people who need care and attention around them.':'சங்கரன்கோவிலில் 2013ஆம் ஆண்டு தொடங்கப்பட்ட கிஃப்ட் அறக்கட்டளை, அக்கறையும் ஆதரவும் தேவைப்படும் மக்களுக்கு உதவுவதை நோக்கமாகக் கொண்டுள்ளது.','Over the years, documented work has included education support, medical assistance, food and basic-needs support, women’s empowerment initiatives, and support for charitable organizations and community efforts.':'இதுவரை பதிவுசெய்யப்பட்ட பணிகளில் கல்வி உதவி, மருத்துவ உதவி, உணவு மற்றும் அத்தியாவசியப் பொருட்கள் வழங்குதல், பெண்கள் முன்னேற்ற முயற்சிகள், தொண்டு நிறுவனங்கள் மற்றும் சமூகப் பணிகளுக்கு ஆதரவு ஆகியவை அடங்கும்.','Support Our Work':'எங்கள் பணிக்கு ஆதரவு அளியுங்கள்','Read Stories of Impact':'சேவையின் தாக்கக் கதைகளைப் படியுங்கள்','See Our Vision':'எங்கள் தொலைநோக்கைப் பாருங்கள்'
+  },
+  hi: {
+    'OUR STORY':'हमारी कहानी','Started with a simple belief:':'एक सरल विश्वास के साथ शुरुआत हुई:','help should reach people.':'मदद ज़रूरतमंद लोगों तक पहुँचे।','OUR WORK':'हमारा कार्य','Support where it':'वहाँ सहयोग दें जहाँ','can matter most.':'उससे सबसे अधिक बदलाव आए।','THE BIGGER PICTURE':'व्यापक दृष्टि','Years of giving.':'वर्षों से सेवा।','Many ways to help.':'मदद करने के कई तरीके।','STORIES OF IMPACT':'प्रभाव की कहानियाँ','Stories worth sharing:':'साझा करने योग्य कहानियाँ:','one human moment at a time.':'एक मानवीय अनुभव से दूसरे तक।','OUR VISION':'हमारा दृष्टिकोण','CONTACT':'संपर्क','Our Story':'हमारी कहानी','Our Work':'हमारा कार्य','Our Vision':'हमारा दृष्टिकोण','Contact':'संपर्क','Donate':'दान करें','Community Support':'समुदाय का सहयोग','Education':'शिक्षा','Medical Support':'चिकित्सा सहायता','Women & Families':'महिलाएँ और परिवार','Support to Organizations':'संस्थाओं को सहयोग','Dignity First':'गरिमा सर्वोपरि','Gift Charitable Trust was established in Sankarankovil in 2013 with a purpose of supporting people who need care and attention around them.':'गिफ्ट चैरिटेबल ट्रस्ट की स्थापना 2013 में संकरनकोविल में उन लोगों की सहायता के उद्देश्य से हुई जिन्हें देखभाल और सहयोग की आवश्यकता है।','Over the years, documented work has included education support, medical assistance, food and basic-needs support, women’s empowerment initiatives, and support for charitable organizations and community efforts.':'अब तक दर्ज किए गए कार्यों में शिक्षा सहायता, चिकित्सा सहायता, भोजन और आवश्यक सामग्री, महिला सशक्तिकरण पहल तथा धर्मार्थ संस्थाओं और सामुदायिक प्रयासों को सहयोग देना शामिल है।','Support Our Work':'हमारे कार्य में सहयोग दें','Read Stories of Impact':'प्रभाव की कहानियाँ पढ़ें','See Our Vision':'हमारा दृष्टिकोण देखें'
+  }
+};
+function tx(value, language) { return contentTranslations[language]?.[value] || value; }
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -503,12 +513,12 @@ function App() {
         </section>
 
         <section className="intro" id="story">
-          <div className="section-kicker">OUR STORY</div>
+          <div className="section-kicker">{tx("OUR STORY", language)}</div>
           <div className="intro-grid">
-            <h2>Started with a simple belief: <em>help should reach people.</em></h2>
+            <h2>{tx("Started with a simple belief:", language)} <em>{tx("help should reach people.", language)}</em></h2>
             <div>
-              <p>Gift Charitable Trust was established in Sankarankovil in 2013 with a purpose of supporting people who need care and attention around them.</p>
-              <p>Over the years, documented work has included education support, medical assistance, food and basic-needs support, women’s empowerment initiatives, and support for charitable organizations and community efforts.</p>
+              <p>{tx("Gift Charitable Trust was established in Sankarankovil in 2013 with a purpose of supporting people who need care and attention around them.", language)}</p>
+              <p>{tx("Over the years, documented work has included education support, medical assistance, food and basic-needs support, women’s empowerment initiatives, and support for charitable organizations and community efforts.", language)}</p>
               <p className="muted">Our approach has evolved. The old “1 Rupee a day” initiative belongs to an earlier chapter and is not a current program. What remains is the same commitment to turn compassion into action.</p>
             </div>
           </div>
@@ -522,8 +532,8 @@ function App() {
         <section className="work" id="work">
           <div className="section-head">
             <div>
-              <div className="section-kicker">OUR WORK</div>
-              <h2>Support where it<br/>can matter most.</h2>
+              <div className="section-kicker">{tx("OUR WORK", language)}</div>
+              <h2>{tx("Support where it", language)}<br/>{tx("can matter most.", language)}</h2>
             </div>
             <p>Gift is not built around a single type of beneficiary or a single kind of intervention. We bring support to genuine needs and, where possible, strengthen the people and organizations already doing the work.</p>
           </div>
@@ -538,7 +548,7 @@ function App() {
             ].map(([Icon,title,text,image]) => (
               <article className="work-card" key={title}>
                 <img className="work-image" src={image} alt={title} />
-                <div className="work-card-body"><Icon size={22}/><h3>{title}</h3><p>{text}</p></div>
+                <div className="work-card-body"><Icon size={22}/><h3>{tx(title, language)}</h3><p>{tx(text, language)}</p></div>
               </article>
             ))}
           </div>
@@ -546,8 +556,8 @@ function App() {
 
         <section className="numbers">
           <div className="number-intro">
-            <div className="section-kicker">THE BIGGER PICTURE</div>
-            <h2>Years of giving.<br/><em>Many ways to help.</em></h2>
+            <div className="section-kicker">{tx("THE BIGGER PICTURE", language)}</div>
+            <h2>{tx("Years of giving.", language)}<br/><em>{tx("Many ways to help.", language)}</em></h2>
             <p>Gift's work has taken different forms over time. These figures bring documented activity together without turning individual acts of support into a project report.</p>
           </div>
           <div className="number-grid collective">
@@ -563,7 +573,7 @@ function App() {
           <div className="section-head">
             <div>
               <div className="section-kicker">STORIES OF IMPACT</div>
-              <h2>Stories worth sharing:<br/><em>one human moment at a time.</em></h2>
+              <h2>{tx("Stories worth sharing:", language)}<br/><em>{tx("one human moment at a time.", language)}</em></h2>
             </div>
             <p>Four stories are featured here on the homepage. The full collection lives on our Stories of Impact page. Beneficiary names remain hidden to protect privacy.</p>
           </div>

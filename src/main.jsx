@@ -466,7 +466,7 @@ function App() {
           <a href="/donate" onClick={close}>Donate</a>
         </nav>
         <a className="nav-cta" href="/donate">Donate <Heart size={15}/></a>
-        <div className="nav-tools"><label className="language-control"><span className="sr-only">{t('language')}</span><select aria-label={t('language')} value={language} onChange={changeLanguage}><option value="en">English</option><option value="ta">தமிழ்</option><option value="hi">हिन्दी</option></select></label><button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
+        <div className="nav-tools"><label className="language-control"><select aria-label={t('language')} value={language} onChange={changeLanguage}><option value="en">English</option><option value="ta">தமிழ்</option><option value="hi">हिन्दी</option></select></label><button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
           {open ? <X/> : <Menu/>}
         </button></div>
       </header>

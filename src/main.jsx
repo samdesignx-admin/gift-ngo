@@ -32,7 +32,7 @@ const stories = [
     stat: '100',
     statLabel: 'students',
     text: 'Educational stationery and provisions, including notebooks and pencil boxes, were provided to 100 students from Grade 1 through Grade 12.',
-    image: '/images/community-meal.png'
+    image: '/images/hero-student.png'
   },
   {
     tag: 'Education',
@@ -41,7 +41,7 @@ const stories = [
     stat: '₹1,09,500',
     statLabel: 'education fees',
     text: 'Gift supported school fees for seven children across three families in Bangalore, covering students from Grade 3 through Grade 7.',
-    image: '/images/hero-student.png'
+    image: '/images/future-campus.png'
   },
   {
     tag: 'Healthcare',

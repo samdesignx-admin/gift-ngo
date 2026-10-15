@@ -456,6 +456,9 @@ function App() {
     <div className="site">
       <header className="nav">
         <Logo />
+        <div className="nav-tools"><label className="language-control"><select aria-label="Choose language" value={language} onChange={changeLanguage}><option value="en">English</option><option value="ta">தமிழ்</option><option value="hi">हिन्दी</option></select></label><button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
+          {open ? <X/> : <Menu/>}
+        </button></div>
         <nav className={open ? 'nav-links open' : 'nav-links'}>
           <a href="#story" onClick={close}>{t('story')}</a>
           <a href="#work" onClick={close}>{t('work')}</a>
@@ -463,12 +466,7 @@ function App() {
           <a href="#vision" onClick={close}>{t('vision')}</a>
           <a href="#contact" onClick={close}>{t('contact')}</a>
           <a href="/donate" onClick={close}>{t('donate')}</a>
-          <a href="/donate" onClick={close}>Donate</a>
         </nav>
-        <a className="nav-cta" href="/donate">Donate <Heart size={15}/></a>
-        <div className="nav-tools"><label className="language-control"><select aria-label={t('language')} value={language} onChange={changeLanguage}><option value="en">English</option><option value="ta">தமிழ்</option><option value="hi">हिन्दी</option></select></label><button className="menu" onClick={() => setOpen(!open)} aria-label="Open navigation">
-          {open ? <X/> : <Menu/>}
-        </button></div>
       </header>
 
       <main id="top">
